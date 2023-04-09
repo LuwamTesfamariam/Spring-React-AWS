@@ -1,4 +1,4 @@
-package springreactaws.dataStore;
+package springreactaws.repo;
 
 import org.springframework.stereotype.Repository;
 import springreactaws.profile.UserProfile;
