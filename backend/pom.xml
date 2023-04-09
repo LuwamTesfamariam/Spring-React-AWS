@@ -11,8 +11,8 @@
     <groupId>springreactaws</groupId>
     <artifactId>Spring-React-AWS</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>Spring-React-AWS</name>
-    <description>Spring-React-AWS</description>
+    <name>AWSImageUploadApplication</name>
+    <description>AWSImageUploadApplication</description>
     <properties>
         <java.version>17</java.version>
     </properties>
