@@ -1,11 +1,19 @@
 package springreactaws.profile;
 
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
 import java.util.Objects;
 import java.util.Optional;
 import java.util.UUID;
-
+@Entity
+@Data
+@NoArgsConstructor
 public class UserProfile {
 
+    @Id
     private UUID userProfileId;
     private String username;
     private String userProfileImageLink; //s3 key
