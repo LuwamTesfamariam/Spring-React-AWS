@@ -9,14 +9,14 @@ import java.util.List;
 @Repository
 public class UserProfileDataAccessService {
 
-    private final UserProfileData userProfileData;
+    private final UserProfileRepo userProfileRepo;
 
     @Autowired
-    public UserProfileDataAccessService(UserProfileData userProfileData) {
-        this.userProfileData = userProfileData;
+    public UserProfileDataAccessService(UserProfileRepo userProfileRepo) {
+        this.userProfileRepo = userProfileRepo;
     }
 
     public List<UserProfile> getUserProfiles(){
-        return userProfileData.getUserProfiles();
+        return userProfileRepo.findAll();
     }
 }

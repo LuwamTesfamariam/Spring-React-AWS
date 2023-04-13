@@ -30,12 +30,16 @@ public class UserProfileController {
     }
 
     @PostMapping(
-            path = "/{userProfileId}/image",
+            path = "/{userProfileId}/image/upload",
             consumes = MediaType.MULTIPART_FORM_DATA_VALUE,
             produces = MediaType.APPLICATION_JSON_VALUE
     )
     public void uploadUserProfileImage(@PathVariable UUID userProfileId,
                                        @RequestParam MultipartFile file) {
         userProfileService.uploadUserProfileImage(userProfileId, file);
+    }
+    @GetMapping("/{userProfileId}/image/download")
+    public byte[] downloadProfileImage(@PathVariable UUID userProfileId){
+        return userProfileService.downloadProfileImage(userProfileId);
     }
 }
